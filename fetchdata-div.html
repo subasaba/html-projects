@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fetch Data-Using Div</title>
+        <style>
+            div{
+               height: 150px;
+               width: 170px;
+    
+        border: 2px solid black;
+               
+            }
+            img{
+                height: 70px;
+                width: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="div-body">
+            <h2>ID</h2>
+            <h2>LOGIN</h2>
+            <h2>AVATHAR</h2>
+        </div>
+        <script>
+            fetch("https://api.github.com/users")
+            .then((data)=>{
+                console.log(data);
+                return data.json();
+            })
+            .then((objectData)=>{
+                console.log(objectData);
+                var divData="";
+                objectData.map((values)=>{
+                    divData+=`
+                    <div>${values.id}+${values.login}+<img src="${values.avatar_url}"></div>
+                })`
+                document.getElementById('div-body').innerHTML=divData;
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
+            })
+        </script>
+    </body>
+</html>

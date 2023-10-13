@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage</title>
+        <style>
+            #box{
+                height: 220px;
+                width: 500px;
+                border: 2px solid gray;
+                margin: auto;
+            }
+            h2{
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+            #rbutton{
+                background-color: blue;
+                color: white;
+                padding: 15px;
+                border: none;
+                margin-left: 550px;
+                margin-top: 15px;
+            }
+            #cbutton{
+                background-color: blue;
+                color: white;
+                padding: 15px;
+                margin-left: 50px;
+                margin-top: 15px;
+                border: none;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="box">
+        <h2 id="dname"></h2>
+        <h2 id="dage"></h2>
+        <h2 id="dnative"></h2>
+        </div>
+        <button onclick="remove()" id="rbutton">Remove</button>
+        <button onclick="del()" id="cbutton">Clear</button>
+        <script>
+            var name="Subashini";
+            localStorage.setItem("MyName",name);
+            var getname=localStorage.getItem("MyName");
+            document.getElementById("dname").innerHTML="My Name is : "+getname;
+
+            localStorage.setItem("MyAge",25);
+            var getage=localStorage.getItem("MyAge");
+            document.getElementById("dage").innerHTML="My Age is : "+getage;
+        
+
+            localStorage.setItem("MyNative","Kanyakumari");
+            var getnative=localStorage.getItem("MyNative");
+            document.getElementById("dnative").innerHTML="My Native : "+getnative;
+
+            function remove(){
+                localStorage.removeItem("MyAge");
+            }
+            function del(){
+                localStorage.clear();
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Iteration Method</title>
+    </head>
+    <body>
+        
+        <h2 id="demo"></h2>
+        <ol id="list"></ol>
+        <script>
+        
+        
+            var flowers=["Jasmine","Rose","Sunflower","Lotus","Lilly"];
+            var txt=" ";
+            var print=flowers.forEach(check);
+            function check(value,index,array){
+                txt+="<li>"+value+"</li>";
+            }
+            document.getElementById('list').innerHTML=txt;
+        </script>
+    </body>
+ </html>

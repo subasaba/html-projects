@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Printing-Odd-Even Number</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            #parent{
+                height: 600px;
+                width: 400px;
+                border: 2px solid gray;
+            }
+            #one{
+                height: 600px;
+                width: 200px;
+                float: left;
+                border-right: 2px solid gray;
+            }
+            #two{
+                height: 600px;
+                width: 200px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            <div id="one"></div>
+            <div id="two"></div>
+        </div>
+        <script>
+            for(var i=1;i<=50;i++){
+                console.log(i);
+                document.getElementById('one').innerHTML=i+"<br>";
+            }
+        </script>
+    </body>
+</html>

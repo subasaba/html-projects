@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array-Iteration Method</title>
+    </head>
+    <body>
+        <h1 id="demo"></h1>
+        <script>
+            var number=[[3,2], [1] ,[4,12]];
+            var txt=" ";
+            var a=[...number[0],...number[1],...number[2]];
+            console.log(a);
+            var add=a.reduce(check);
+            function check(total,value,index,array){
+                console.log(total);
+                return total+value;
+            }
+            document.getElementById('demo').innerHTML=`The Addition of [[3,2],[1],[4,12]] is : ${add}`;
+        </script>
+    </body>
+</html> 

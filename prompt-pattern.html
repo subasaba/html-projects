@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prompt-Pattern</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <button onclick="pattern()">Pattern</button>
+        <script>
+           function pattern(){
+            var num=prompt("Enter the number");
+            for(var i=0;i<=num;i++){
+                for(var j=1;j<=i;j++){
+                    document.write(" "+i);
+                }
+                document.write("<br>");
+            } 
+            document.getElementById('demo').innerHTML=num;
+           }
+        </script>
+    </body>
+</html>

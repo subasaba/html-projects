@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Normal Object to JSON</title>
+        <style>
+            body{
+                background-color: plum;
+            }
+            #box{
+                height: 350px;
+                width: 450px;
+                border: 2px solid gray;
+                background-color: antiquewhite;
+                margin: auto;
+                margin-top: 130px;
+            }
+            h2{
+                margin-top: 40px;
+                text-align: center;
+                color: rgb(55, 172, 172);
+            }
+            h3{
+                font-size:25px;
+                margin-left: 10px;
+                color: rgb(241, 40, 141);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <h3>Object to JSON:</h3>
+            <h2 id="json"></h2>
+            <h3>JSON to Object:</h3>
+            <h2 id="name"></h2>
+            <h2 id="age"></h2>
+        </div>
+        <script>
+            // Normal Object to JSON
+            var person={
+                Name:"Subashini",
+                Age:25,
+            }
+            var myjson=JSON.stringify(person);
+            document.getElementById('json').innerHTML=myjson;
+            console.log(myjson);
+
+            // Local Storage
+          //  localStorage.setItem("Name","Subashini");
+          //  localStorage.setItem("Age",25);
+          localStorage.setItem('myjson');
+
+            // JSON to Normal Object
+            const details='{"Name":"Subashini","Age":25}';
+            const changeObj=JSON.parse(details);
+            document.getElementById('name').innerHTML="My Name is :"+changeObj.Name;
+            document.getElementById('age').innerHTML="My Age is :"+changeObj.Age;
+        </script>
+    </body>
+</html>
