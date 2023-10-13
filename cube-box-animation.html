@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cube Animation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        #parent{
+            height: 300px;
+            width: 300px;
+            margin: auto;
+            margin-top: 150px;
+            box-shadow: 5px 5px 5px white;
+            animation: cube 4s;
+        }
+        #first{
+            height: 100px;
+            width: 300px;
+        }
+        #one{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #two{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #three{
+            height: 100px;
+            width: 100px;
+            background-color: greenyellow;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #second{
+            height: 100px;
+            width: 300px;
+        }
+        #four{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #five{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 20px;
+        }
+        #six{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #third{
+            height: 100px;
+            width: 300px;
+        }
+        #seven{
+            height: 100px;
+            width: 100px;
+            background-color: greenyellow;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #eight{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        }
+        #nine{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            border: 1px solid white;
+            float: left;
+            border-radius: 4px;
+        } 
+        @keyframes cube{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="first">
+            <div id="one"></div>
+            <div id="two"></div>
+            <div id="three"></div>
+        </div>
+        <div id="second">
+            <div id="four"></div>
+            <div id="five">hmc</div>
+            <div id="six"></div>
+        </div>
+        <div id="third">
+            <div id="seven"></div>
+            <div id="eight"></div>
+            <div id="nine"></div>
+        </div>
+    </div>
+</body>
+</html>

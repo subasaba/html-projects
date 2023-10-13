@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Nested Counters</title>
+        <style>
+            body{
+                background-color: rgb(228, 55, 81);
+                color: white;
+            }
+            li{
+                list-style-type: none;
+            }
+            h1{
+                counter-reset: number;
+            }
+            .top::before{
+                counter-increment: number;
+                content: counter(number)".";
+            }
+            .top{
+                counter-reset: subnumber;
+            }
+            ul li::before{
+                counter-increment: subnumber;
+                content: counter(number)"." counter(subnumber)".";
+            }
+            .nested{
+                counter-reset: nested;
+            }
+           .nested li:before{
+            counter-increment: nested;
+            content:counter(number)"." counter(subnumber)"." counter(nested)".";
+           }
+
+        </style>
+    </head>
+    <body>
+        <h1>Counter used in Nested List</h1>
+       <ol>
+        <li class="top">Apple
+            <ul>
+                <li>Red</li>
+                <li>Green</li>
+            </ul>
+        </li>
+        <li class="top">Mango
+            <ul>
+                <li>Ripe</li>
+                <li>Unripe</li>
+            </ul>
+        </li>
+        <li class="top">Pine Apple</li>
+        <li class="top">Grapes
+            <ul>
+                <li>Black</li>
+                <ul class="nested">
+                    <li>Seed</li>
+                    <li>Seed-less</li>
+                </ul>
+                <li>Green</li>
+                <ul class="nested">
+                    <li>Seed</li>
+                    <li>Seed-less</li>
+                </ul>
+            </ul>
+        </li>
+       </ol>
+    </body>
+</html>

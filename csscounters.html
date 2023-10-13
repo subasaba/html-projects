@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Counters</title>
+    <style>
+        div {
+            height: 500px;
+            width: 570px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 50px;
+            background-image: url(dark-feather.jpg);
+            counter-reset: number;
+        }
+        h2{
+            color: white;
+            margin-left: 10px;
+            counter-reset: subnumber;
+        }
+        h2::before{
+            counter-increment: number;
+            content: counter(number)". ";
+        }
+        p{
+            color: lightblue;
+            margin-left: 20px;
+        }
+        p::before{
+            counter-increment: subnumber;
+            content: counter(number)"." counter(subnumber)". ";
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2>Hyper Text Markup Language</h2>
+        <p>HTML contains series of elements</p>
+        <p>HTML attributes provides additional information to the elements</p>
+        <p>Semantic elements used in HTML5</p>
+        <h2>Cascading Style Sheet</h2>
+        <p>CSS is used to style and layout the webpage</p>
+        <p>CSS describes how HTML elements should be displayed</p>
+        <p>CSS saves lot of work.It can control the layout of multiple webpages all at once.</p>
+        <h2>Javascript</h2>
+        <p>JS is the programming language of the web</p>
+        <p>JS is a lightweight Programming Language.</p>
+        <p>JS is easy to learn</p>
+    </div>
+</body>
+
+</html>

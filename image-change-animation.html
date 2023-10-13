@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Image Animation</title>
+        <style>
+            body{
+                background-color: aqua;
+            }
+            div{
+                height: 350px;
+                width: 550px;
+                border: 5px solid blue;
+                margin: auto;
+                margin-top: 120px;
+                background: url(cat.jpg) no-repeat;
+                background-size: 550px 350px;
+                animation: image 13s linear 5;
+            }
+            @keyframes image{
+                0%{
+                    background-image: url(cat.jpg);
+                }
+                25%{
+                    background-image: url(straberry.jpg);
+                }
+                50%{
+                    background-image: url(sunflower.webp);
+                }
+                75%{
+                    background-image: url(forest-path.jpg);
+                }
+                100%{
+                    background-image: url(dark-feather.jpg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+ </html>
