@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Z-Index Animation</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            #parent{
+                height: 400px;
+                width: 500px;
+                border: 1px solid white;
+                margin: auto;
+                margin-top: 120px;
+                position: relative;
+            }
+            #box{
+                height: 140px;
+                width: 130px;
+                background-color: orangered;
+                border: 1px solid black;
+                position: absolute;
+                top: 80px;
+                left: 120px;
+                z-index: -1;
+                animation: index 5s linear 4 alternate;         
+            }
+            #one{
+                height: 120px;
+                width: 120px;
+                background-color: rgba(183, 218, 230,0.3);
+                border: 1px solid gray;
+                position: absolute;
+                top: 110px;
+                left: 150px;
+                z-index: 1;
+            }
+            #two{
+                height: 120px;
+                width: 120px;
+                background-color: rgba(183, 218, 230,0.3);
+                border: 1px solid gray;
+                position: absolute;
+                top: 140px;
+                left: 180px;
+                z-index: 2;
+            }
+            #three{
+                height: 120px;
+                width: 120px;
+                background-color: rgba(183, 218, 230,0.3);
+                border: 1px solid gray;
+                position: absolute;
+                top: 170px;
+                left: 210px;
+                z-index: 3;
+            }
+            #four{
+                height: 120px;
+                width: 120px;
+                background-color: rgba(183, 218, 230,0.3);
+                border: 1px solid gray;
+                position: absolute;
+                top: 195px;
+                left: 235px;
+                z-index: 4;
+            }
+            @keyframes index{
+                from{
+                    z-index: -1;
+                }
+                to{
+                    z-index: 5;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+        <div id="box">My Box</div>
+        <div id="one">Z Index-1</div>
+        <div id="two">Z Index-2</div>
+        <div id="three">Z Index-3</div>
+        <div id="four">Z Index-4</div>
+        </div>
+    </body>
+</html>
