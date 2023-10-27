@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Element</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        h1{
+            text-align: center;
+            color: peachpuff;
+        }
+        div{
+            height: 200px;
+            width: 350px;
+            margin: auto;
+        }
+        h4{
+            text-align: center;
+            color: peachpuff;
+        }
+        p{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dim the Lights, Please</h1>
+    <div>
+    <video height="200" width="350" controls>
+        <source src="nature.mp4" type="video/mp4">
+    </video>
+    </div>
+    <h4>This webpages uses HTML5 video,Javascript,DOM events,and CSS.</h4>
+    <p>When the video starts playing,a DOM event is fired,and a Javascript function "dims the lights" by<br>
+        fading the webpage background color to black and lowering the opacity of the rest of the page.</p>
+
+     <p>When the video pauses or ends,another event is fired and a second Javascript function brings the<br>
+    lights back up.</p>   
+
+    <p>Try It!</p>
+</body>
+</html>
